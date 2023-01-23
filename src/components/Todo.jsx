@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import CreateTodo from "./CreateTodo";
+
 import ListTodo from "./ListTodo";
+import CreateTodo from "./CreateTodo";
 
 const Todo = () => {
   const url = "https://jsonplaceholder.typicode.com/todos?_limit=10";
@@ -9,14 +10,18 @@ const Todo = () => {
 
   useEffect(() => {
     fetch(url)
-      .then((respond) => respond.json())
+      .then((response) => response.json())
       .then((data) => setTodos(data));
   }, []);
 
+  const deleteTodo = (id) => {
+    setTodos([...todos.filter((todo) => todo.id !== id)]);
+  };
+
   return (
     <div>
-      <CreateTodo />
-      <ListTodo todos={todos} />
+      <CreateTodo setTodos={setTodos} />
+      <ListTodo todos={todos} deleteTodo={deleteTodo} />
     </div>
   );
 };

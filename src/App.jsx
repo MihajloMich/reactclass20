@@ -3,8 +3,9 @@ import Todo from "./components/Todo";
 const App = () => {
   return (
     <>
-      <Todo></Todo>
+      <Todo />
     </>
   );
 };
+
 export default App;
