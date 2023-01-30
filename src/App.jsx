@@ -4,11 +4,11 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
-import { User } from "./pages/NewUser";
+import { User } from "./pages/User";
 import { NotFound } from "./pages/NotFound";
 import { Users } from "./pages/Users";
 import { NewUser } from "./pages/NewUser";
-import { UsersLayout } from "./layouts/UsersLayout";
+import { UsersLayout } from "./Layouts/UserLayout";
 
 const App = () => {
   return (

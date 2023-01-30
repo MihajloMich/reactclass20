@@ -1,3 +1,7 @@
+import { useParams } from "react-router-dom";
+
 export const NewUser = () => {
-  <div>User Page</div>;
+  const { id } = useParams();
+
+  return <div>User Page {id}</div>;
 };
